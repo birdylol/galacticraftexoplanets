@@ -2,24 +2,25 @@ package net.birdylol.gcexoplanets.objects.celestialbodies.kapteynsystem.b.biome.
 
 import net.birdylol.gcexoplanets.GCExo;
 import micdoodle8.mods.miccore.IntCache;
+import net.birdylol.gcexoplanets.objects.celestialbodies.kapteynsystem.KapteynSystem;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.layer.GenLayer;
 
 public class GenLayerKapteynbBiomes extends GenLayer {
-	private static final Biome[] biomes = new Biome[GCExo.kapteynb.getBiomes().size()];
+	private static final Biome[] biomes = new Biome[KapteynSystem.kapteynb.getBiomes().size()];
 
 	public GenLayerKapteynbBiomes(long l, GenLayer parent) {
 		super(l);		
-		for(int i = 0; i < GCExo.kapteynb.getBiomes().size(); i++)
-			biomes[i] = GCExo.kapteynb.getBiomes().get(i);
+		for(int i = 0; i < KapteynSystem.kapteynb.getBiomes().size(); i++)
+			biomes[i] = KapteynSystem.kapteynb.getBiomes().get(i);
 		
 		this.parent = parent;
 	}
 
 	public GenLayerKapteynbBiomes(long l) {
 		super(l);		
-		for(int i = 0; i < GCExo.kapteynb.getBiomes().size(); i++)
-			biomes[i] = GCExo.kapteynb.getBiomes().get(i);
+		for(int i = 0; i < KapteynSystem.kapteynb.getBiomes().size(); i++)
+			biomes[i] = KapteynSystem.kapteynb.getBiomes().get(i);
 	}
 
 	@Override

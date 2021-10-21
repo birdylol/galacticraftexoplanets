@@ -8,6 +8,7 @@ import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.client.CloudRenderer;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import net.birdylol.gcexoplanets.GCExo;
+import net.birdylol.gcexoplanets.objects.celestialbodies.kapteynsystem.KapteynSystem;
 import net.birdylol.gcexoplanets.objects.celestialbodies.kapteynsystem.b.biome.BiomeProviderKapteynb;
 import net.birdylol.gcexoplanets.objects.celestialbodies.kapteynsystem.b.sky.SkyProviderKapteynb;
 import net.birdylol.gcexoplanets.util.GEXDimensions;
@@ -75,7 +76,7 @@ public class WorldProviderKapteynb extends WorldProviderAdvancedSpace implements
     @Override
     public CelestialBody getCelestialBody() {
 
-        return GCExo.kapteynb;
+        return KapteynSystem.kapteynb;
 
     }
     

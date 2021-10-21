@@ -1,6 +1,7 @@
 package net.birdylol.gcexoplanets.objects.celestialbodies.kapteynsystem;
 
 import asmodeuscore.api.IBodies;
+import asmodeuscore.api.IBodiesHandler;
 import asmodeuscore.api.dimension.IAdvancedSpace;
 import asmodeuscore.core.astronomy.BodiesData;
 import asmodeuscore.core.astronomy.BodiesRegistry;
@@ -22,12 +23,19 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 
+
+@IBodiesHandler
 public class KapteynSystem implements IBodies
 {
 
     public static SolarSystem kapteyn;
     public static Planet kapteync;
     public static Planet kapteynb;
+
+    @Override
+    public boolean canRegister() {
+        return true;
+    }
 
     @Override
     public void preInit(FMLPreInitializationEvent event)
@@ -38,6 +46,7 @@ public class KapteynSystem implements IBodies
         kapteyn.setMainStar(starSol);
         BodiesData data = new BodiesData(IAdvancedSpace.TypeBody.STAR, IAdvancedSpace.ClassBody.SUBDWARF).setStarColor(IAdvancedSpace.StarColor.RED);
         BodiesRegistry.registerBodyData(kapteyn.getMainStar(), data);
+        GalaxyRegistry.registerSolarSystem(kapteyn);
 
 
         kapteynb = BodiesRegistry.registerExPlanet(kapteyn, "kapteynb", "gcexoplanets:lang/en_us.lang", 0.48F);
@@ -54,7 +63,6 @@ public class KapteynSystem implements IBodies
         BodiesRegistry.setOrbitData(kapteync, (float) Math.PI, 1.4F, 1.5F);
         GalaxyRegistry.registerPlanet(kapteync);
 
-        GalaxyRegistry.registerSolarSystem(kapteyn);
     }
 
 
@@ -70,5 +78,21 @@ public class KapteynSystem implements IBodies
     {
         GEXDimensions.KAPTEYN_B = WorldUtil.getDimensionTypeById(-15);
     }
+
+    @Override
+    public void registerRecipes() {
+
+    }
+
+    @Override
+    public void registerRender() {
+
+    }
+
+    @Override
+    public void registerVariant() {
+
+    }
+
 
 }

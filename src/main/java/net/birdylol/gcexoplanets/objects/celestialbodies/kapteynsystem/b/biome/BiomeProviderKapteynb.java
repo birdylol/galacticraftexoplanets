@@ -1,6 +1,7 @@
 package net.birdylol.gcexoplanets.objects.celestialbodies.kapteynsystem.b.biome;
 
 import net.birdylol.gcexoplanets.GCExo;
+import net.birdylol.gcexoplanets.objects.celestialbodies.kapteynsystem.KapteynSystem;
 import net.birdylol.gcexoplanets.objects.celestialbodies.kapteynsystem.b.biome.layers.GenLayerKapteynbBiomes;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldType;
@@ -15,7 +16,7 @@ public class BiomeProviderKapteynb extends BiomeProvider
     {
     	super(world.getWorldInfo());
     	allowedBiomes.clear();
-    	allowedBiomes = GCExo.kapteynb.getBiomes();
+    	allowedBiomes = KapteynSystem.kapteynb.getBiomes();
     }
 
     @Override

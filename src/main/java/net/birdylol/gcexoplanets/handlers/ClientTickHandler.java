@@ -92,7 +92,7 @@ public class ClientTickHandler
                 }
 
 
-                
+
 
                 int k = 4;
                 if(mc.gameSettings.isKeyDown(mc.gameSettings.keyBindSneak)) k = s.length;

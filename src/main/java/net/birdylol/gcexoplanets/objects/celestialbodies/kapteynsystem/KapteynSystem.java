@@ -13,6 +13,7 @@ import micdoodle8.mods.galacticraft.api.galaxies.SolarSystem;
 import micdoodle8.mods.galacticraft.api.galaxies.Star;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.util.WorldUtil;
+import net.birdylol.gcexoplanets.GCExo;
 import net.birdylol.gcexoplanets.objects.celestialbodies.kapteynsystem.b.TeleportTypeKapteynb;
 import net.birdylol.gcexoplanets.objects.celestialbodies.kapteynsystem.b.WorldProviderKapteynb;
 import net.birdylol.gcexoplanets.util.GEXDimensions;
@@ -49,8 +50,7 @@ public class KapteynSystem implements IBodies
         GalaxyRegistry.registerSolarSystem(kapteyn);
 
 
-        kapteynb = BodiesRegistry.registerExPlanet(kapteyn, "kapteynb", "gcexoplanets:lang/en_us.lang", 0.48F);
-        kapteynb.setBodyIcon(new ResourceLocation("gcexoplanets:textures/gui/celestialbodies/kapteyn/kb.png"));
+        kapteynb = BodiesRegistry.registerExPlanet(kapteyn, "kapteynb", GCExo.ASSET_PREFIX, 0.48F);
         BodiesRegistry.setPlanetData(kapteynb, 4.0F, 3, 36000L, BodiesRegistry.calculateGravity(7.8F), false);
         BodiesRegistry.setProviderData(kapteynb, WorldProviderKapteynb .class, -1338, 6, ACBiome.ACSpace);
         BodiesRegistry.setOrbitData(kapteynb, (float) Math.PI, 1.2F, 0.9F);

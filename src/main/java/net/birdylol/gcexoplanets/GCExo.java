@@ -28,11 +28,10 @@ import static sun.awt.geom.Crossings.debug;
 @Mod(modid = MODID, name = Reference.NAME, version = Reference.VERSION)
 public class GCExo
 {
-
     public static final String ASSET_PREFIX = MODID;
-    private static final String MODID = "gcexoplanets";
+    public static final String TEXTURE_PREFIX = ASSET_PREFIX + ":";
 
-    @Instance(GCExo.MODID);
+    @Instance(MODID)
     public static GCExo instance;
 
     @SidedProxy(clientSide = Reference.CLIENT, serverSide = Reference.COMMON)
@@ -50,12 +49,6 @@ public class GCExo
         }
 
 
-        //Systems
-
-        //----Kapteyn
-
-
-
     }
 
     @EventHandler
@@ -71,7 +64,7 @@ public class GCExo
     @EventHandler
     public static void postInit(FMLPostInitializationEvent event)
     {
-        @EventBusSubscriber(modid = MODID)
+        @EventBusSubscriber
         class RegistrationHandler
         {
             @SubscribeEvent

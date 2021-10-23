@@ -76,7 +76,7 @@ public class KapteynSystem implements IBodies
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
-        GEXDimensions.KAPTEYN_B = WorldUtil.getDimensionTypeById(-15);
+        GEXDimensions.KAPTEYN_B = WorldUtil.getDimensionTypeById(-1338);
     }
 
     @Override
